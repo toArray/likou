@@ -5,19 +5,19 @@ import (
 	"testing"
 )
 
-func TestTopic04(T *testing.T) {
+func TestTopic03(T *testing.T) {
 	s := "abcabcbb"
 	s = "pwwkew"
 	//s = "aaa"
 	//s = "aaa"
 	//s = "aaa"
 	//s = "abbbb"
-	res := topic04(s)
+	res := topic03(s)
 	fmt.Println(res)
 }
 
 //无重复字符的最长子串
-func topic04(s string) int {
+func topic03(s string) int {
 	windows := make(map[uint8]int)
 	left := 0
 	right := 0
