@@ -9,12 +9,13 @@ func TestTopic05(T *testing.T) {
 	s := "amadam"
 	//s = "ada"
 	//s = "addad"
-	//s = "add"
+	s = "add"
+	s = "aadd"
 	res := topic05(s)
 	fmt.Println(res)
 }
 
-//最长回文子串
+//最长回文子串中心扩散法
 func topic05(s string) string {
 	if len(s) <= 1 {
 		return s
@@ -31,7 +32,7 @@ func topic05(s string) string {
 	return res
 }
 
-func odd(s string, i int, res string) string {
+func even(s string, i int, res string) string {
 	right := i + 1 //右边位置
 	left := i      //左边位置定义为自己
 
@@ -58,7 +59,7 @@ func odd(s string, i int, res string) string {
 	return res
 }
 
-func even(s string, i int, res string) string {
+func odd(s string, i int, res string) string {
 	right := i + 1 //右边位置
 	left := i - 1  //左边位置
 
