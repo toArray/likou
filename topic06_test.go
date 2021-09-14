@@ -6,8 +6,8 @@ import (
 )
 
 func TestTopic06(T *testing.T) {
-	s := "AB"
-	res := topic06(s, 1)
+	s := "PAYPALISHIRING"
+	res := topic06(s, 3)
 	fmt.Println(res)
 }
 
@@ -17,14 +17,19 @@ func topic06(s string, numRows int) string {
 		return s
 	}
 
-	base := numRows*2 - 2
+	cur := 0
+	flag := false
 	data := make([][]byte, numRows)
 	for i := 0; i < len(s); i++ {
-		mod := i % base
-		if mod < numRows {
-			data[mod] = append(data[mod], s[i])
+		data[cur] = append(data[cur], s[i])
+		if cur == 0 || cur == numRows-1 {
+			flag = !flag
+		}
+
+		if flag {
+			cur++
 		} else {
-			data[base-mod] = append(data[base-mod], s[i])
+			cur--
 		}
 	}
 
