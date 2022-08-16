@@ -32,3 +32,10 @@ func backtracking(startIndex int, max int, l int) {
 		path = path[:len(path)-1]
 	}
 }
+
+func combine(n int, k int) [][]int {
+	res = make([][]int, 0)
+	path = make([]int, 0)
+	backtracking(1, n, k)
+	return res
+}
