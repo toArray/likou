@@ -7,7 +7,7 @@ import (
 
 //电话号码的字母组合
 func Test17(t *testing.T) {
-	fmt.Println(letterCombinations("23"))
+	fmt.Println(letterCombinations("234"))
 }
 
 var (
